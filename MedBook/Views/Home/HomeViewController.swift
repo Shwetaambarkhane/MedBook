@@ -26,6 +26,8 @@ class HomeViewController: UIViewController {
         homeTopBar.delegate = self
         homeTopBar.layoutIfNeeded()
         
+        searchBar.delegate = self
+        
         let nib = UINib(nibName: "BookCoverCell", bundle: nil)
         booksListView.register(nib, forCellWithReuseIdentifier: cellId)
         booksListView.delegate = self
